@@ -1,3 +1,29 @@
 table, th, td {
-    border: 1px solid black;
+    border: 1px dotted black;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
   }
+body {
+    background-color: rgb(186, 246, 246);
+}
+#submitButton {
+    background-color: rgb(72, 237, 240);  
+}
+.thHeaderColor {
+    background-color: rgb(72, 237, 240);
+    border-color: black;
+}
+h3 {
+    display: inline;
+}
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px rgb(162, 162, 162);
+}
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+    text-align: center;
+}
