@@ -6,7 +6,7 @@ function onReady(){
     $('body').on('click', '.deleteButton', removeMonthlyMoney)
     $('body').on('click', '.deleteButton', deleteEmployee);
 }
-function render(){
+function ifMonthlyMoney(){
     if($('#monthlyMoney').text() > 20000){
         $('h3').css({'background-color': 'red', 'font-size': '200%'});
     }
@@ -28,7 +28,6 @@ function addEmployee(){
         annualSalary: Number(annualSalaryInput)
     }
     employees.push(newEmployee);
-    let employeesWeDontWantToDelete = [];
     $('.newEmployeeTR').empty();
     for(let i = 0; i < employees.length; i++){
         $('table').append(`
@@ -47,12 +46,11 @@ function addEmployee(){
     $('#idInput').val('')
     $('#titleNameInput').val('')
     $('#annualSalaryInput').val('')
-    render()
+    ifMonthlyMoney()
 }
 function deleteEmployee(){
-    let newEmployeRemove = $(this).parent().parent();
-    newEmployeRemove.remove();
-    render()
+    $(this).parent().parent().remove()
+    ifMonthlyMoney()
 }
 function removeMonthlyMoney(){
     let newEmployeeAnnualSalaryRemove = $(this).parent().siblings('.annualSalaryTH').text();
@@ -61,5 +59,5 @@ function removeMonthlyMoney(){
     let monthlySalary = newEmployeeSalaryValue / 12;
     monthlyMoney = monthlyMoney - monthlySalary;
     $('#monthlyMoney').text(monthlyMoney);
-    render()
+    ifMonthlyMoney()
 }
