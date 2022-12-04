@@ -7,8 +7,10 @@ function onReady(){
     $('body').on('click', '.deleteButton', deleteEmployee);
 }
 function ifMonthlyMoney(){
-    if($('#monthlyMoney').text() > 20000){
+    if(monthlyMoney > 20000){
         $('h3').css({'background-color': 'red', 'font-size': '200%'});
+    } else if (monthlyMoney < 20000){
+        $('h3').css({'background-color': 'white', 'font-size': '100%'});
     }
 }
 function addEmployee(){
