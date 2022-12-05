@@ -10,7 +10,7 @@ function ifMonthlyMoney(){
     if(monthlyMoney > 20000){
         $('h3').css({'background-color': 'red', 'font-size': '200%'});
     } else if (monthlyMoney < 20000){
-        $('h3').css({'background-color': 'white', 'font-size': '100%'});
+        $('h3').css({'background-color': 'rgb(186, 246, 246)', 'font-size': '100%'});
     }
 }
 function addEmployee(){
